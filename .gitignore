@@ -1,0 +1,18 @@
+# Generated build output and local runtime paths
+/build/
+/.gradle/
+/run/
+
+# IDE and operating-system files
+/.idea/
+/.vscode/
+*.iml
+.DS_Store
+Thumbs.db
+
+# Local credentials and configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem

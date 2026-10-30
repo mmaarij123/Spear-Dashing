@@ -1,0 +1,11 @@
+{
+	"required": true,
+	"package": "speardash.mixin.client",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"ForceAttack"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	}
+}

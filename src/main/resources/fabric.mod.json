@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "speardash",
+  "version": "1.1.0",
+  "name": "Spear Dashing",
+  "description": "Client-side spear swapping and dash controls.",
+  "authors": [
+    "Maarij"
+  ],
+  "license": "CC0-1.0",
+  "icon": "assets/speardash/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "main": [
+      "speardash.SpearDash"
+    ],
+    "client": [
+      "speardash.SpearDashClient"
+    ]
+  },
+  "mixins": [
+    "speardash.mixins.json",
+    {
+      "config": "speardash.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=0.17.3",
+    "minecraft": "*",
+    "java": ">=21",
+    "fabric-api": "*",
+    "fzzy_config": "*"
+  }
+}

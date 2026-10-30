@@ -1,0 +1,7 @@
+{
+  "custom.my_sound": {
+    "sounds": [
+      "custom/test"
+    ]
+  }
+}
