@@ -1,0 +1,58 @@
+name: Publish JAR to GitHub Packages
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  packages: write
+
+concurrency:
+  group: publish-maven-package
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out source and packaged JAR
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+
+      - name: Verify JAR checksum
+        working-directory: downloads
+        run: sha256sum --check SHA256SUMS
+
+      - name: Verify artifact metadata and notices
+        shell: python
+        run: |
+          import json
+          import xml.etree.ElementTree as ET
+          import zipfile
+          from pathlib import Path
+          ns = {'m': 'http://maven.apache.org/POM/4.0.0'}
+          pom = ET.parse('packaging/pom.xml').getroot()
+          with zipfile.ZipFile('downloads/Spear-Dashing-1.1.0-optimized.jar') as jar:
+              assert jar.testzip() is None, 'JAR integrity check failed'
+              metadata = json.loads(jar.read('fabric.mod.json'))
+              assert metadata['version'] == pom.findtext('m:version', namespaces=ns)
+              assert metadata['license'] == ['LicenseRef-Spear-Dashing-Proprietary', 'CC0-1.0']
+              assert jar.read('LICENSE_proprietary') == Path('LICENSE').read_bytes()
+              assert jar.read('LICENSE_speardash') == Path('src/main/resources/LICENSE_speardash').read_bytes()
+              assert jar.read('THIRD_PARTY_NOTICES.md') == Path('THIRD_PARTY_NOTICES.md').read_bytes()
+          print('JAR metadata, integrity and licensing notices verified.')
+
+      - name: Publish Maven package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: >-
+          mvn --batch-mode --no-transfer-progress
+          --settings .github/maven-settings.xml
+          org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file
+          -Dfile=downloads/Spear-Dashing-1.1.0-optimized.jar
+          -DpomFile=packaging/pom.xml
+          -DrepositoryId=github
+          -Durl=https://maven.pkg.github.com/mmaarij123/Spear-Dashing

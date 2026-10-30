@@ -1,0 +1,48 @@
+Spear Dashing — Proprietary License and Rights Notice
+SPDX-License-Identifier: LicenseRef-Spear-Dashing-Proprietary
+
+Copyright (c) 2026 Maarij (GitHub: mmaarij123).
+All rights reserved in the original material covered by this notice.
+
+1. Scope
+
+This notice applies only to original, copyrightable contributions owned by
+Maarij that have not already been made available under CC0 or another license
+granting continuing rights. It applies prospectively from October 30, 2026.
+It does not claim ownership of third-party or public-domain material.
+
+The recovered Spear Dashing 1.0 source and material previously offered under
+CC0 1.0 Universal remain subject to CC0. Their rights are not revoked or
+restricted by this notice. See THIRD_PARTY_NOTICES.md and the preserved
+src/main/resources/LICENSE_speardash for that license text.
+
+2. Source code
+
+Except for the exclusions in section 1, rights required by applicable law,
+and rights granted by GitHub's applicable terms for viewing and forking a
+public repository on GitHub, no permission is granted to use, copy, modify,
+incorporate into another project, redistribute, sublicense, sell, or otherwise
+exploit the covered source code or other covered original material without
+prior written permission from Maarij.
+
+3. Personal use of the compiled mod
+
+Maarij permits downloading and running an unmodified published JAR for
+personal gameplay. This limited permission does not authorize reuse of the
+covered source code, distribution of modified versions, or commercial
+exploitation of covered original material. It does not narrow any rights
+independently available for the excluded material in section 1.
+
+4. Requests for permission
+
+Contact Maarij through the GitHub account mmaarij123 to request separate
+written permission. Public availability and package publication do not,
+by themselves, grant additional rights in covered original material.
+
+5. Disclaimer
+
+TO THE EXTENT PERMITTED BY APPLICABLE LAW, COVERED MATERIAL IS PROVIDED
+"AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT.
+THE COPYRIGHT HOLDER IS NOT LIABLE FOR CLAIMS OR DAMAGES ARISING FROM
+USE OF THE COVERED MATERIAL.
