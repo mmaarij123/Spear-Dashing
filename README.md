@@ -8,13 +8,13 @@
 
 A client-side Fabric mod for automatic spear swapping and dash controls.
 
-![Version](https://img.shields.io/badge/version-1.1.0-7c3aed?style=flat-square)
+![Version](https://img.shields.io/badge/release-V1.1-7c3aed?style=flat-square)
 ![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62a04d?style=flat-square)
 ![Loader](https://img.shields.io/badge/loader-Fabric-dbb790?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-21%2B-e89539?style=flat-square)
 ![License](https://img.shields.io/badge/license-Proprietary%20%2B%20CC0%20upstream-64748b?style=flat-square)
 
-[Get the mod](downloads/Spear-Dashing-1.1.0-optimized.jar) · [GitHub Packages](https://github.com/mmaarij123/Spear-Dashing/packages) · [Getting started](#getting-started) · [Settings](#settings)
+[Download V1.1](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) · [Release notes](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1) · [Getting started](#getting-started) · [Settings](#settings)
 
 </div>
 
@@ -49,7 +49,7 @@ Keep a **Lunge-enchanted spear in your hotbar**, press **R**, and let Spear Dash
 ### Install
 
 1. Close Minecraft.
-2. Download [`Spear-Dashing-1.1.0-optimized.jar`](downloads/Spear-Dashing-1.1.0-optimized.jar).
+2. Download [`Spear Dashing V1.1.jar`](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) from [Releases](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1).
 3. Place it in your Fabric profile's `mods` folder alongside Fabric API and Fzzy Config.
 4. Remove older Spear Dashing JARs so only one version remains.
 5. Launch the profile.
@@ -117,20 +117,14 @@ mods/fzzy_config-0.7.6+1.21.11.jar
 Build output:
 
 ```text
-build/Spear-Dashing-1.1.0-optimized.jar
+build/Spear Dashing V1.1.jar
 ```
 
-## GitHub Packages
+## Releases
 
-The JAR is published to this repository's **Maven package registry** with these coordinates:
+Installable JARs are available under **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases)**. Download the **Spear Dashing V1.1.jar** asset for this version; the source ZIP and source tarball are for development.
 
-```text
-io.github.mmaarij123:spear-dashing:1.1.0
-```
-
-Registry: `https://maven.pkg.github.com/mmaarij123/Spear-Dashing`
-
-GitHub's Maven registry requires authentication even for public packages. For a normal Minecraft installation, use the [JAR in this repository](downloads/Spear-Dashing-1.1.0-optimized.jar). See [package instructions](docs/PACKAGES.md) for publishing and Maven downloads.
+The source tree contains the code, resources, build script and documentation. Compiled binaries are distributed separately as release assets. See [release details](docs/RELEASES.md) for the filename, checksum and build notes.
 
 ## Project map
 
@@ -144,17 +138,15 @@ Spear-Dashing/
 │   ├── KeyBinding.java              # Default R binding
 │   └── mixin/client/ForceAttack.java
 ├── src/main/resources/              # Metadata, mixins, icon and language files
-├── downloads/                       # Existing optimized 1.1.0 JAR
 ├── docs/RECOVERY.md                  # Original recovery and validation record
-├── packaging/pom.xml                 # Maven publication metadata
-├── .github/workflows/                # Manual GitHub Packages publication
+├── docs/RELEASES.md                  # Release download and artifact checksum
 ├── build.ps1                        # Local-cache build script
 └── LICENSE                          # Reserved rights; earlier CC0 rights preserved
 ```
 
 ## Validation notes
 
-The original recovery record reports successful compilation and packaged bytecode checks. In-game timing, server acceptance and compatibility with other mods have **not** been verified. The bundled JAR uses the existing optimized compiled classes, repackaged with updated licensing metadata and notices. Its class files are unchanged; this is not a new compilation. A [SHA-256 checksum](downloads/SHA256SUMS) accompanies the published JAR.
+The original recovery record reports successful compilation and packaged bytecode checks. In-game timing, server acceptance and compatibility with other mods have **not** been verified. The release JAR uses the existing optimized compiled classes, repackaged with updated licensing metadata and notices, and renamed for distribution. Its class files are unchanged; this is not a new compilation. The [release details](docs/RELEASES.md) record its SHA-256 checksum.
 
 For a quick in-game check, try a tap, a held press, release/repress, intervals 1–5, opening the inventory, and leaving/rejoining a world. Verify that the original selected slot returns after releasing the key.
 
@@ -167,5 +159,5 @@ For a quick in-game check, try a tap, a held press, release/repress, intervals 1
 ---
 
 <div align="center">
-<sub>Spear Dashing · Fabric · v1.1.0</sub>
+<sub>Spear Dashing · Fabric · V1.1</sub>
 </div>

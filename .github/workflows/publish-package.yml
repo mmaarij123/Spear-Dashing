@@ -1,4 +1,4 @@
-name: Publish JAR to GitHub Packages
+name: Remove old Maven package
 
 on:
   workflow_dispatch:
@@ -7,52 +7,40 @@ permissions:
   contents: read
   packages: write
 
-concurrency:
-  group: publish-maven-package
-  cancel-in-progress: false
-
 jobs:
-  publish:
+  remove:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 5
     steps:
-      - name: Check out source and packaged JAR
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-        with:
-          persist-credentials: false
-
-      - name: Verify JAR checksum
-        working-directory: downloads
-        run: sha256sum --check SHA256SUMS
-
-      - name: Verify artifact metadata and notices
+      - name: Remove the previously published Spear Dashing package
         shell: python
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           import json
-          import xml.etree.ElementTree as ET
-          import zipfile
-          from pathlib import Path
-          ns = {'m': 'http://maven.apache.org/POM/4.0.0'}
-          pom = ET.parse('packaging/pom.xml').getroot()
-          with zipfile.ZipFile('downloads/Spear-Dashing-1.1.0-optimized.jar') as jar:
-              assert jar.testzip() is None, 'JAR integrity check failed'
-              metadata = json.loads(jar.read('fabric.mod.json'))
-              assert metadata['version'] == pom.findtext('m:version', namespaces=ns)
-              assert metadata['license'] == ['LicenseRef-Spear-Dashing-Proprietary', 'CC0-1.0']
-              assert jar.read('LICENSE_proprietary') == Path('LICENSE').read_bytes()
-              assert jar.read('LICENSE_speardash') == Path('src/main/resources/LICENSE_speardash').read_bytes()
-              assert jar.read('THIRD_PARTY_NOTICES.md') == Path('THIRD_PARTY_NOTICES.md').read_bytes()
-          print('JAR metadata, integrity and licensing notices verified.')
+          import os
+          import urllib.error
+          import urllib.request
 
-      - name: Publish Maven package
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: >-
-          mvn --batch-mode --no-transfer-progress
-          --settings .github/maven-settings.xml
-          org.apache.maven.plugins:maven-deploy-plugin:3.1.4:deploy-file
-          -Dfile=downloads/Spear-Dashing-1.1.0-optimized.jar
-          -DpomFile=packaging/pom.xml
-          -DrepositoryId=github
-          -Durl=https://maven.pkg.github.com/mmaarij123/Spear-Dashing
+          url = 'https://api.github.com/users/mmaarij123/packages/maven/io.github.mmaarij123.spear-dashing'
+          headers = {
+              'Authorization': 'Bearer ' + os.environ['GH_TOKEN'],
+              'Accept': 'application/vnd.github+json',
+              'User-Agent': 'Spear-Dashing-Package-Cleanup',
+          }
+          with urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30) as response:
+              package = json.load(response)
+          assert package['name'] == 'io.github.mmaarij123.spear-dashing'
+          assert package['package_type'] == 'maven'
+          assert package['repository']['full_name'] == 'mmaarij123/Spear-Dashing'
+          assert package['version_count'] == 1, 'Unexpected additional package versions; review before deleting.'
+          with urllib.request.urlopen(urllib.request.Request(url, method='DELETE', headers=headers), timeout=30) as response:
+              assert response.status == 204
+          try:
+              urllib.request.urlopen(urllib.request.Request(url, headers=headers), timeout=30)
+          except urllib.error.HTTPError as error:
+              assert error.code == 404, f'Unexpected verification response: {error.code}'
+          else:
+              raise AssertionError('Package is still accessible after deletion')
+          print('Old Maven package removed; authenticated lookup now returns 404.')

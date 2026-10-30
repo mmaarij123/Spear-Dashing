@@ -3,6 +3,9 @@
 /.gradle/
 /run/
 
+# Compiled mods are distributed through GitHub Releases
+*.jar
+
 # IDE and operating-system files
 /.idea/
 /.vscode/

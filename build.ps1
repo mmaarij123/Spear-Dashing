@@ -19,7 +19,7 @@ $taskArgFile = Join-Path $taskBuild 'javac.args'
 $taskArgs | Set-Content -LiteralPath $taskArgFile -Encoding utf8
 & javac "@$taskArgFile"
 if ($LASTEXITCODE -ne 0) { throw 'Compilation failed' }
-$taskJar = Join-Path $taskBuild 'Spear-Dashing-1.1.0-optimized.jar'
+$taskJar = Join-Path $taskBuild 'Spear Dashing V1.1.jar'
 & jar --create --file $taskJar -C $taskClasses . -C (Join-Path $PSScriptRoot 'src/main/resources') .
 if ($LASTEXITCODE -ne 0) { throw 'Packaging failed' }
 Write-Output $taskJar
