@@ -43,14 +43,24 @@ Keep a **Lunge-enchanted spear in your hotbar**, press **R**, and let Spear Dash
 | Minecraft | **1.21.11** |
 | Mod loader | **Fabric** — the supplied build script expects the **0.18.6** runtime cache |
 | Java | **21 or newer** |
-| Dependencies | **Fabric API** and **Fzzy Config 0.7.6** for Minecraft 1.21.11 |
+| Dependencies | **Fabric API** and **Fzzy Config** for Minecraft 1.21.11 — see the required download below |
 | Environment | **Client** |
+
+### Must download: Fzzy Config
+
+> **Fzzy Config is REQUIRED. Spear Dashing will not load or work without it.**
+
+Fzzy Config provides the configuration system used by Spear Dashing's settings. Download **Fzzy Config 0.7.7 for Minecraft 1.21.11 / Fabric** and place its JAR in the **same `mods` folder** as Spear Dashing and Fabric API.
+
+**[Download Fzzy Config — MUST DOWNLOAD](https://cdn.modrinth.com/data/hYykXjDp/versions/5SSZmpdx/fzzy_config-0.7.7%2B1.21.11.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=fabric)**
+
+File: `fzzy_config-0.7.7+1.21.11.jar` · [View this version on Modrinth](https://modrinth.com/mod/fzzy-config/version/5SSZmpdx)
 
 ### Install
 
 1. Close Minecraft.
 2. Download [`Spear Dashing V1.1.jar`](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) from [Releases](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1).
-3. Place it in your Fabric profile's `mods` folder alongside Fabric API and Fzzy Config.
+3. **Download Fzzy Config using the required link above.** Put both JARs in your Fabric profile's `mods` folder alongside Fabric API. Spear Dashing cannot work if Fzzy Config is missing.
 4. Remove older Spear Dashing JARs so only one version remains.
 5. Launch the profile.
 
@@ -107,7 +117,7 @@ The default profile is **Remarkably Optimized** under `%APPDATA%/ModrinthApp`. T
 ./build.ps1 -ModrinthRoot 'D:/Games/ModrinthApp' -ProfileName 'My Fabric Profile'
 ```
 
-The selected profile must have the exact runtime cache and Fzzy Config JAR expected by `build.ps1`:
+For source compilation, the current `build.ps1` still expects the original cached Fzzy Config **0.7.6** filename below. The **0.7.7** download above is the supplied installation link. The selected build profile must have these exact runtime-cache and dependency paths:
 
 ```text
 .fabric/remappedJars/minecraft-1.21.11-0.18.6/client-intermediary.jar
