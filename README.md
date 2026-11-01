@@ -9,16 +9,31 @@
 A client-side Fabric mod for automatic spear swapping and dash controls.
 
 ![Version](https://img.shields.io/badge/release-V1.1-7c3aed?style=flat-square)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11-62a04d?style=flat-square)
+![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20%7C%2026.x-62a04d?style=flat-square)
 ![Loader](https://img.shields.io/badge/loader-Fabric-dbb790?style=flat-square)
 ![Java](https://img.shields.io/badge/Java-21%2B-e89539?style=flat-square)
 ![License](https://img.shields.io/badge/license-Proprietary%20%2B%20CC0%20upstream-64748b?style=flat-square)
 
-[Download V1.1](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) · [Release notes](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1) · [Getting started](#getting-started) · [Settings](#settings)
+[Choose a download](#supported-minecraft-versions) · [All releases](https://github.com/mmaarij123/Spear-Dashing/releases) · [Getting started](#getting-started) · [Settings](#settings)
 
 </div>
 
 ---
+
+## Supported Minecraft versions
+
+**Mod version stays V1.1.** Each Minecraft 26.x target has its own compiled Fabric JAR. Choose the release matching your game version and install one Spear Dashing JAR per profile.
+
+| Minecraft | Fabric release | Required Fzzy Config |
+| :--- | :--- | :--- |
+| **26.3** | [Spear Dashing V1.1 — MC26.3](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.3) | [0.7.7+fix3+26.3](https://modrinth.com/mod/fzzy-config/version/YkOumqzV) |
+| **26.2** | [Spear Dashing V1.1 — MC26.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.2) | [0.7.7+26.2](https://modrinth.com/mod/fzzy-config/version/tZ4vc79R) |
+| **26.1.2** | [Spear Dashing V1.1 — MC26.1.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.2) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
+| **26.1.1** | [Spear Dashing V1.1 — MC26.1.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.1) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
+| **26.1** | [Spear Dashing V1.1 — MC26.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
+| **1.21.11** | [Original Spear Dashing V1.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1) | [0.7.7+1.21.11](https://modrinth.com/mod/fzzy-config/version/5SSZmpdx) |
+
+**For Minecraft 26.x, you must install Java 25+, Fabric Loader 0.19.5+, Fabric API, Fzzy Config, and Fabric Language Kotlin.** Fzzy Config is mandatory; Spear Dashing will not load without it. Use the [version-specific dependency downloads](ports/README.md#required-downloads) for your target.
 
 ## A smoother way to dash
 
@@ -38,6 +53,8 @@ Keep a **Lunge-enchanted spear in your hotbar**, press **R**, and let Spear Dash
 
 ### Requirements
 
+The table below describes the original **Minecraft 1.21.11** build. For **26.x**, use the [port requirements and downloads](ports/README.md#required-downloads).
+
 | Component | Target |
 | :--- | :--- |
 | Minecraft | **1.21.11** |
@@ -50,6 +67,8 @@ Keep a **Lunge-enchanted spear in your hotbar**, press **R**, and let Spear Dash
 
 > **Fzzy Config is REQUIRED. Spear Dashing will not load or work without it.**
 
+The direct download below is for **1.21.11**. For **26.x**, select the Fzzy Config version in the support table above.
+
 Fzzy Config provides the configuration system used by Spear Dashing's settings. Download **Fzzy Config 0.7.7 for Minecraft 1.21.11 / Fabric** and place its JAR in the **same `mods` folder** as Spear Dashing and Fabric API.
 
 **[Download Fzzy Config — MUST DOWNLOAD](https://cdn.modrinth.com/data/hYykXjDp/versions/5SSZmpdx/fzzy_config-0.7.7%2B1.21.11.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=fabric)**
@@ -59,8 +78,8 @@ File: `fzzy_config-0.7.7+1.21.11.jar` · [View this version on Modrinth](https:/
 ### Install
 
 1. Close Minecraft.
-2. Download [`Spear Dashing V1.1.jar`](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) from [Releases](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1).
-3. **Download Fzzy Config using the required link above.** Put both JARs in your Fabric profile's `mods` folder alongside Fabric API. Spear Dashing cannot work if Fzzy Config is missing.
+2. Download the JAR for **your exact Minecraft version** from the [release table](#supported-minecraft-versions).
+3. **Install the matching Fzzy Config and Fabric API JARs.** Minecraft 26.x also requires Fabric Language Kotlin. Place the mod and dependencies in the same profile's `mods` folder. Spear Dashing cannot work if Fzzy Config is missing.
 4. Remove older Spear Dashing JARs so only one version remains.
 5. Launch the profile.
 
@@ -99,9 +118,27 @@ Direction-changing dashes retain the original one-tick rotation setup. See the [
 
 ## Build from source
 
+### Minecraft 26.x — Java 25
+
+The modern port uses the game's official, unobfuscated class names, common source, and small version-specific adapters. With Python 3.10+ and JDK 25+ on `PATH`, run:
+
+```powershell
+python ports/build.py --all
+```
+
+To build one target:
+
+```powershell
+python ports/build.py --minecraft 26.3
+```
+
+Outputs are under `build/ports/<minecraft-version>/`. Dependencies and game manifests are pinned and checksum-verified. See the [26.x build guide and validation notes](ports/README.md).
+
+### Original Minecraft 1.21.11 — Java 21
+
 This is **recovered and modified source from the supplied Spear Dashing 1.0 JAR**. It retains Fabric intermediary names such as `class_310` and uses the installed profile's dependencies. It is not a reconstructed Gradle/Loom project.
 
-### Windows / PowerShell
+#### Windows / PowerShell
 
 Ensure a **JDK 21+** is on `PATH`. Launch the target Modrinth profile once so its Minecraft, Fabric and library caches exist, then close the game before installing the resulting JAR.
 
@@ -132,7 +169,7 @@ build/Spear Dashing V1.1.jar
 
 ## Releases
 
-Installable JARs are available under **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases)**. Download the **Spear Dashing V1.1.jar** asset for this version; the source ZIP and source tarball are for development.
+Installable JARs are available under **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases)**. Use the [support table](#supported-minecraft-versions) to select the matching JAR. The source ZIP and source tarball are for development.
 
 The source tree contains the code, resources, build script and documentation. Compiled binaries are distributed separately as release assets. See [release details](docs/RELEASES.md) for the filename, checksum and build notes.
 
@@ -150,11 +187,17 @@ Spear-Dashing/
 ├── src/main/resources/              # Metadata, mixins, icon and language files
 ├── docs/RECOVERY.md                  # Original recovery and validation record
 ├── docs/RELEASES.md                  # Release download and artifact checksum
+├── ports/src/main/java/             # Common Minecraft 26.x source
+├── ports/compat/                    # Version-specific API adapters
+├── ports/versions.json              # Pinned manifests and dependencies
+├── ports/build.py                   # Java 25 build matrix
 ├── build.ps1                        # Local-cache build script
 └── LICENSE                          # Reserved rights; earlier CC0 rights preserved
 ```
 
 ## Validation notes
+
+The **26.x** variants were compiled separately against all five target game JARs. Isolated Fabric clients verified title-screen startup, Fzzy Config registration, key binding registration, and application of the attack-invoker mixin. See the [port validation record](ports/VALIDATION.json). Actual in-world dash timing, multiplayer behavior, and compatibility with other mods have not been tested.
 
 The original recovery record reports successful compilation and packaged bytecode checks. In-game timing, server acceptance and compatibility with other mods have **not** been verified. The release JAR uses the existing optimized compiled classes, repackaged with updated licensing metadata and notices, and renamed for distribution. Its class files are unchanged; this is not a new compilation. The [release details](docs/RELEASES.md) record its SHA-256 checksum.
 

@@ -1,4 +1,18 @@
-# Spear Dashing V1.1
+# Spear Dashing V1.1 releases
+
+The mod version remains **1.1**. Minecraft 26.x has five separate Fabric builds:
+
+| Minecraft | Release |
+| :--- | :--- |
+| 26.1 | [Spear Dashing V1.1 — MC26.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1) |
+| 26.1.1 | [Spear Dashing V1.1 — MC26.1.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.1) |
+| 26.1.2 | [Spear Dashing V1.1 — MC26.1.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.2) |
+| 26.2 | [Spear Dashing V1.1 — MC26.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.2) |
+| 26.3 | [Spear Dashing V1.1 — MC26.3](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.3) |
+
+See the [26.x dependency downloads and build instructions](../ports/README.md) and [per-target startup validation](../ports/VALIDATION.json). All 26.x ports require Java 25+, Fabric Loader 0.19.5+, Fabric API, Fzzy Config, and Fabric Language Kotlin.
+
+## Original Minecraft 1.21.11 release
 
 Download the compiled mod from **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1)**.
 

@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-02",
+  "mod_version": "1.1",
+  "fabric_loader_tested": "0.20.1",
+  "java": 25,
+  "gameplay_tested": false,
+  "targets": {
+    "26.1": {
+      "minecraft": "26.1",
+      "mod_version": "1.1",
+      "java": 25,
+      "jar": "Spear Dashing V1.1 MC26.1.jar",
+      "sha256": "261ce210f2be974e06f6648de3016ccf6908ad39d0f4dd00f7e95e2e42aa7e82",
+      "dependency_versions": {
+        "fabric-api": "0.155.3+26.1.2",
+        "fzzy-config": "0.7.7+26.1",
+        "fabric-language-kotlin": "1.14.2+kotlin.2.4.21"
+      },
+      "compilation": "passed",
+      "mixin_target": "Minecraft.startAttack()Z verified",
+      "gameplay_tested": false,
+      "client_startup": "passed",
+      "exit_code": 0,
+      "duration_seconds": 24.8,
+      "title_screen": true,
+      "keybinding_and_fzzy_config": true,
+      "attack_invoker_mixin": true
+    },
+    "26.1.1": {
+      "minecraft": "26.1.1",
+      "mod_version": "1.1",
+      "java": 25,
+      "jar": "Spear Dashing V1.1 MC26.1.1.jar",
+      "sha256": "77cc8b6668497e2d55048fbd7bb05691508e74c064749d25aa504ef97e090924",
+      "dependency_versions": {
+        "fabric-api": "0.155.3+26.1.2",
+        "fzzy-config": "0.7.7+26.1",
+        "fabric-language-kotlin": "1.14.2+kotlin.2.4.21"
+      },
+      "compilation": "passed",
+      "mixin_target": "Minecraft.startAttack()Z verified",
+      "gameplay_tested": false,
+      "client_startup": "passed",
+      "exit_code": 0,
+      "duration_seconds": 20.4,
+      "title_screen": true,
+      "keybinding_and_fzzy_config": true,
+      "attack_invoker_mixin": true
+    },
+    "26.1.2": {
+      "minecraft": "26.1.2",
+      "mod_version": "1.1",
+      "java": 25,
+      "jar": "Spear Dashing V1.1 MC26.1.2.jar",
+      "sha256": "d340c61c316aa1b11825dd8fc935dd89a98ec6f35bc6d3db4a75cb218d7d900e",
+      "dependency_versions": {
+        "fabric-api": "0.155.3+26.1.2",
+        "fzzy-config": "0.7.7+26.1",
+        "fabric-language-kotlin": "1.14.2+kotlin.2.4.21"
+      },
+      "compilation": "passed",
+      "mixin_target": "Minecraft.startAttack()Z verified",
+      "gameplay_tested": false,
+      "client_startup": "passed",
+      "exit_code": 0,
+      "duration_seconds": 23.9,
+      "title_screen": true,
+      "keybinding_and_fzzy_config": true,
+      "attack_invoker_mixin": true
+    },
+    "26.2": {
+      "minecraft": "26.2",
+      "mod_version": "1.1",
+      "java": 25,
+      "jar": "Spear Dashing V1.1 MC26.2.jar",
+      "sha256": "c3b8d155339ee1581d4cd2a478210baec8efcdcc84e45e0e7f07b33cb6cf3c36",
+      "dependency_versions": {
+        "fabric-api": "0.161.0+26.2",
+        "fzzy-config": "0.7.7+26.2",
+        "fabric-language-kotlin": "1.14.2+kotlin.2.4.21"
+      },
+      "compilation": "passed",
+      "mixin_target": "Minecraft.startAttack()Z verified",
+      "gameplay_tested": false,
+      "client_startup": "passed",
+      "exit_code": 0,
+      "duration_seconds": 21.1,
+      "title_screen": true,
+      "keybinding_and_fzzy_config": true,
+      "attack_invoker_mixin": true
+    },
+    "26.3": {
+      "minecraft": "26.3",
+      "mod_version": "1.1",
+      "java": 25,
+      "jar": "Spear Dashing V1.1 MC26.3.jar",
+      "sha256": "c9cfdeec7273925b4758e71200ac1afb03fe8bfed63ef2edeb735bd5c1f4cf77",
+      "dependency_versions": {
+        "fabric-api": "0.165.0+26.3",
+        "fzzy-config": "0.7.7+fix3+26.3",
+        "fabric-language-kotlin": "1.14.2+kotlin.2.4.21"
+      },
+      "compilation": "passed",
+      "mixin_target": "Minecraft.startAttack()Z verified",
+      "gameplay_tested": false,
+      "client_startup": "passed",
+      "exit_code": 0,
+      "duration_seconds": 25.3,
+      "title_screen": true,
+      "keybinding_and_fzzy_config": true,
+      "attack_invoker_mixin": true
+    }
+  }
+}
