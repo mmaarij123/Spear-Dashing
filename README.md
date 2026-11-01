@@ -1,20 +1,20 @@
 <div align="center">
 
-<img src="src/main/resources/assets/speardash/icon.png" alt="Spear Dashing icon" width="88" />
+<img src="src/main/resources/assets/speardash/icon.png" alt="Spear Dashing" width="88" />
 
-# Spear Dashing
+# Spear Dashing V1.1
 
 **One key. A quick swap. Your next dash.**
 
-A client-side Fabric mod for automatic spear swapping and dash controls.
+Automatic spear swapping and dash controls for Minecraft Java Edition on Fabric.
 
-![Version](https://img.shields.io/badge/release-V1.1-7c3aed?style=flat-square)
-![Minecraft](https://img.shields.io/badge/Minecraft-1.21.11%20%7C%2026.x-62a04d?style=flat-square)
-![Loader](https://img.shields.io/badge/loader-Fabric-dbb790?style=flat-square)
-![Java](https://img.shields.io/badge/Java-21%2B-e89539?style=flat-square)
-![License](https://img.shields.io/badge/license-Proprietary%20%2B%20CC0%20upstream-64748b?style=flat-square)
+![Version](https://img.shields.io/badge/mod_version-1.1-7c3aed?style=flat-square)
+![Minecraft](https://img.shields.io/badge/Minecraft-26.1%20%E2%80%93%2026.3%20%7C%201.21.11-62a04d?style=flat-square)
+![Fabric](https://img.shields.io/badge/loader-Fabric-dbb790?style=flat-square)
+![Java](https://img.shields.io/badge/Java-25%2B_for_26.x-e89539?style=flat-square)
+![Environment](https://img.shields.io/badge/environment-Client-64748b?style=flat-square)
 
-[Choose a download](#supported-minecraft-versions) · [All releases](https://github.com/mmaarij123/Spear-Dashing/releases) · [Getting started](#getting-started) · [Settings](#settings)
+[Download your version](#supported-minecraft-versions) · [Required dependencies](#must-download-fzzy-config) · [Installation](#getting-started) · [Settings](#settings) · [Build from source](#build-from-source)
 
 </div>
 
@@ -22,195 +22,222 @@ A client-side Fabric mod for automatic spear swapping and dash controls.
 
 ## Supported Minecraft versions
 
-**Mod version stays V1.1.** Each Minecraft 26.x target has its own compiled Fabric JAR. Choose the release matching your game version and install one Spear Dashing JAR per profile.
+**The mod version stays V1.1.** There are five separately compiled Minecraft 26.x builds, plus the original 1.21.11 release. Select the JAR matching your **exact Minecraft version**.
 
-| Minecraft | Fabric release | Required Fzzy Config |
+| Minecraft | Download JAR | Release notes |
 | :--- | :--- | :--- |
-| **26.3** | [Spear Dashing V1.1 — MC26.3](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.3) | [0.7.7+fix3+26.3](https://modrinth.com/mod/fzzy-config/version/YkOumqzV) |
-| **26.2** | [Spear Dashing V1.1 — MC26.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.2) | [0.7.7+26.2](https://modrinth.com/mod/fzzy-config/version/tZ4vc79R) |
-| **26.1.2** | [Spear Dashing V1.1 — MC26.1.2](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.2) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
-| **26.1.1** | [Spear Dashing V1.1 — MC26.1.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.1) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
-| **26.1** | [Spear Dashing V1.1 — MC26.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) |
-| **1.21.11** | [Original Spear Dashing V1.1](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1) | [0.7.7+1.21.11](https://modrinth.com/mod/fzzy-config/version/5SSZmpdx) |
+| **26.3** | [Spear Dashing V1.1 MC26.3.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1-mc26.3/Spear.Dashing.V1.1.MC26.3.jar) | [26.3 release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.3) |
+| **26.2** | [Spear Dashing V1.1 MC26.2.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1-mc26.2/Spear.Dashing.V1.1.MC26.2.jar) | [26.2 release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.2) |
+| **26.1.2** | [Spear Dashing V1.1 MC26.1.2.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1-mc26.1.2/Spear.Dashing.V1.1.MC26.1.2.jar) | [26.1.2 release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.2) |
+| **26.1.1** | [Spear Dashing V1.1 MC26.1.1.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1-mc26.1.1/Spear.Dashing.V1.1.MC26.1.1.jar) | [26.1.1 release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1.1) |
+| **26.1** | [Spear Dashing V1.1 MC26.1.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1-mc26.1/Spear.Dashing.V1.1.MC26.1.jar) | [26.1 release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1-mc26.1) |
+| **1.21.11** | [Spear Dashing V1.1.jar](https://github.com/mmaarij123/Spear-Dashing/releases/download/v1.1/Spear.Dashing.V1.1.jar) | [Original release](https://github.com/mmaarij123/Spear-Dashing/releases/tag/v1.1) |
 
-**For Minecraft 26.x, you must install Java 25+, Fabric Loader 0.19.5+, Fabric API, Fzzy Config, and Fabric Language Kotlin.** Fzzy Config is mandatory; Spear Dashing will not load without it. Use the [version-specific dependency downloads](ports/README.md#required-downloads) for your target.
+Install one Spear Dashing JAR per profile. Compiled JARs are distributed through **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases)**; the source ZIP and source tarball are for development.
 
-## A smoother way to dash
+## Requirements
 
-Keep a **Lunge-enchanted spear in your hotbar**, press **R**, and let Spear Dashing handle the swap. Hold the key to repeat when the configured interval and attack cooldown allow. Your original hotbar slot is restored between swaps.
+| Build | Java | Loader | Required mods |
+| :--- | :--- | :--- | :--- |
+| **26.1, 26.1.1, 26.1.2, 26.2, 26.3** | **25+** | **Fabric Loader 0.19.5+** | Matching **Fabric API**, **Fzzy Config**, and **Fabric Language Kotlin** |
+| **Original 1.21.11** | **21+** | Fabric for Minecraft 1.21.11 | Matching **Fabric API**, **Fzzy Config**, and its **Fabric Language Kotlin** dependency |
 
-### What's inside
+Spear Dashing runs on the **client**. The 26.x startup checks used Fabric Loader **0.20.1** and the dependency versions listed below.
 
-- **Tap or hold** — detects brief presses and samples held input every client tick.
-- **Adjustable timing** — choose a repeat and swap-back interval from **1–5 ticks**.
-- **Slot restoration** — completes the previous restoration before beginning another swap.
-- **Optional effects** — turn sound and particle effects on or off.
-- **Menu awareness** — ignores new dash input while a screen is open and clears pending actions when the player or world is unavailable.
+## Must download: Fzzy Config
 
-> The interval controls retry timing. Minecraft's attack cooldown and server mechanics still determine when a dash succeeds; a one-tick interval does not guarantee a dash every tick.
+> **MUST DOWNLOAD: Fzzy Config is a required dependency. Spear Dashing will not load or work without it.**
+
+Fzzy Config provides the configuration system used by the mod's settings. It also requires **Fabric API** and **Fabric Language Kotlin**. Place all dependency JARs in the **same profile's `mods` folder** as Spear Dashing.
+
+### Minecraft 26.x dependency downloads
+
+| Minecraft | Fabric API | Fzzy Config — required | Fabric Language Kotlin — required |
+| :--- | :--- | :--- | :--- |
+| **26.1 / 26.1.1 / 26.1.2** | [0.155.3+26.1.2](https://modrinth.com/mod/fabric-api/version/3dM0X6ou) | [0.7.7+26.1](https://modrinth.com/mod/fzzy-config/version/Ugxie86a) | [1.14.2+kotlin.2.4.21](https://modrinth.com/mod/fabric-language-kotlin/version/SKW1BTL3) |
+| **26.2** | [0.161.0+26.2](https://modrinth.com/mod/fabric-api/version/ewUK83HI) | [0.7.7+26.2](https://modrinth.com/mod/fzzy-config/version/tZ4vc79R) | [1.14.2+kotlin.2.4.21](https://modrinth.com/mod/fabric-language-kotlin/version/SKW1BTL3) |
+| **26.3** | [0.165.0+26.3](https://modrinth.com/mod/fabric-api/version/EQKgpeKu) | [0.7.7+fix3+26.3](https://modrinth.com/mod/fzzy-config/version/YkOumqzV) | [1.14.2+kotlin.2.4.21](https://modrinth.com/mod/fabric-language-kotlin/version/SKW1BTL3) |
+
+The linked dependency files in the first row support all three 26.1-family versions. The **Spear Dashing JAR itself must still match your exact game version**. The [pinned dependency manifest](ports/versions.json) records the files used for compilation and startup checks.
+
+### Original Minecraft 1.21.11 dependencies
+
+**[Download Fzzy Config 0.7.7 for 1.21.11 / Fabric — MUST DOWNLOAD](https://cdn.modrinth.com/data/hYykXjDp/versions/5SSZmpdx/fzzy_config-0.7.7%2B1.21.11.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=fabric)**
+
+File: `fzzy_config-0.7.7+1.21.11.jar` · [Version details](https://modrinth.com/mod/fzzy-config/version/5SSZmpdx)
+
+Also install the appropriate Minecraft 1.21.11 versions of [Fabric API](https://modrinth.com/mod/fabric-api) and [Fabric Language Kotlin](https://modrinth.com/mod/fabric-language-kotlin).
 
 ## Getting started
 
-### Requirements
-
-The table below describes the original **Minecraft 1.21.11** build. For **26.x**, use the [port requirements and downloads](ports/README.md#required-downloads).
-
-| Component | Target |
-| :--- | :--- |
-| Minecraft | **1.21.11** |
-| Mod loader | **Fabric** — the supplied build script expects the **0.18.6** runtime cache |
-| Java | **21 or newer** |
-| Dependencies | **Fabric API** and **Fzzy Config** for Minecraft 1.21.11 — see the required download below |
-| Environment | **Client** |
-
-### Must download: Fzzy Config
-
-> **Fzzy Config is REQUIRED. Spear Dashing will not load or work without it.**
-
-The direct download below is for **1.21.11**. For **26.x**, select the Fzzy Config version in the support table above.
-
-Fzzy Config provides the configuration system used by Spear Dashing's settings. Download **Fzzy Config 0.7.7 for Minecraft 1.21.11 / Fabric** and place its JAR in the **same `mods` folder** as Spear Dashing and Fabric API.
-
-**[Download Fzzy Config — MUST DOWNLOAD](https://cdn.modrinth.com/data/hYykXjDp/versions/5SSZmpdx/fzzy_config-0.7.7%2B1.21.11.jar?mr_download_reason=standalone&mr_game_version=1.21.11&mr_loader=fabric)**
-
-File: `fzzy_config-0.7.7+1.21.11.jar` · [View this version on Modrinth](https://modrinth.com/mod/fzzy-config/version/5SSZmpdx)
-
-### Install
-
-1. Close Minecraft.
-2. Download the JAR for **your exact Minecraft version** from the [release table](#supported-minecraft-versions).
-3. **Install the matching Fzzy Config and Fabric API JARs.** Minecraft 26.x also requires Fabric Language Kotlin. Place the mod and dependencies in the same profile's `mods` folder. Spear Dashing cannot work if Fzzy Config is missing.
-4. Remove older Spear Dashing JARs so only one version remains.
-5. Launch the profile.
+1. Close Minecraft and select a Fabric profile for the game version you want to play.
+2. Check that the profile uses the required Java version from the [requirements table](#requirements).
+3. Download the matching Spear Dashing JAR from the [release table](#supported-minecraft-versions).
+4. Download **Fabric API**, **Fzzy Config**, and **Fabric Language Kotlin** for that game version.
+5. Put the mod and its dependency JARs in the profile's `mods` folder.
+6. Keep only one Spear Dashing JAR in the profile, then launch Minecraft.
 
 ### Your first dash
 
-1. Put a **Lunge-enchanted spear** in a hotbar slot.
-2. Press **R**, the default **Spear Dashing** key binding. Rebind it in Minecraft's Controls settings if needed.
-3. Hold the key for repeated attempts, or tap for a single input.
+1. Put a **Lunge-enchanted spear in your hotbar**.
+2. Press **R**, the default Spear Dashing key. You can rebind it in Minecraft's Controls settings.
+3. Tap for a single input, or hold the key for repeated attempts.
 4. Start with the default **2-tick** interval; choose **1 tick** for the fastest configured retry.
+
+The mod swaps to a suitable spear and restores the original hotbar slot between swaps. New dash input is ignored while a menu is open, and pending actions are cleared when the player or world is unavailable.
+
+> The 1–5 tick setting controls retry and swap-back timing. Minecraft's attack cooldown and server mechanics still determine when a dash succeeds. A one-tick setting does not guarantee a successful dash every tick.
+
+## Features & settings
+
+- **Tap or hold:** held input is sampled every client tick, with queued short presses also detected.
+- **Configurable timing:** adjust the swap-back and minimum repeat interval from 1–5 ticks.
+- **Hotbar restoration:** complete the previous restoration before beginning another swap.
+- **Optional effects:** enable or disable sound and particle effects.
+- **Version-specific builds:** separate compiled JARs for each supported 26.x target.
 
 ## Settings
 
 | Setting | Default | Purpose |
 | :--- | :---: | :--- |
 | `dashing` | `true` | Enables automatic spear swapping and dashing. |
-| `swapDelayTicks` | `2` | Sets the swap-back and minimum repeat interval; clamped to **1–5**. |
+| `swapDelayTicks` | `2` | Swap-back and minimum repeat interval, clamped to **1–5 ticks**. |
 | `soundEffects` | `true` | Enables sound effects. |
 | `particleEffects` | `true` | Enables particle effects. |
-| `omnidirectionalDashing` | `false` | Requests movement-key direction handling when the applicable advanced-feature code path is available. |
-| `rangeExtensions` | `true` | Requests spear swapping for out-of-range hits when the applicable advanced-feature code path is available. |
+| `omnidirectionalDashing` | `false` | Requests movement-key direction handling in the applicable code paths. |
+| `rangeExtensions` | `true` | Requests spear swapping for out-of-range hits in the applicable advanced code path. |
 
-**Advanced feature status:** the recovered source initializes `advancedFeaturesEnabled` to `false` and contains no assignment enabling it. Omnidirectional and range settings should therefore not be treated as fully enabled features in this build; some fallback handling remains in the original logic.
+**Advanced settings status:** the inherited `advancedFeaturesEnabled` flag remains `false`. Some directional and range-related paths are therefore disabled, while fallback handling remains. These settings are not presented as fully enabled or gameplay-verified features. The main dash, interval, hotbar and effects settings remain available.
 
-## What's new in 1.1.0
+## What's new in V1.1
 
-The update focuses on input responsiveness and consistent swap timing:
+### Minecraft 26.x releases
 
-- Replaces reliance on keyboard-repeat events with tick-based held-key sampling.
-- Drains queued presses so short taps are also detected.
-- Replaces the fixed eight-tick input lockout with the configured interval.
-- Allows a one-tick interval to retry on the next tick when the cooldown permits.
-- Preserves the original selected slot during continuous use.
-- Restricts hotbar searches to valid slots **0–8**.
+- Adds separately compiled Fabric builds for **26.1**, **26.1.1**, **26.1.2**, **26.2**, and **26.3**, keeping the mod version at **1.1**.
+- Ports Minecraft references to the game's official, unobfuscated class names and Java 25.
+- Updates Fabric key registration to `KeyMappingHelper.registerKeyMapping`.
+- Handles screen access through a small adapter for each API family; 26.3 also uses the renamed keyboard input type.
+- Validates the attack-invoker target and gives every JAR an exact Minecraft-version requirement.
+- Adds pinned dependency downloads, checksum checks, and a build command for the full five-target matrix.
 
-Direction-changing dashes retain the original one-tick rotation setup. See the [recovery and validation notes](docs/RECOVERY.md) for the original change record.
+### Existing dash improvements
+
+- Tick-based held-key sampling instead of relying on operating-system keyboard repeat.
+- Queued-press handling for short taps.
+- A configured retry interval in place of the original fixed eight-tick input lockout.
+- Original-slot restoration during continuous use and searches limited to valid hotbar slots **0–8**.
+- Menu and world-state handling for pending dash actions.
+
+Direction-changing dashes retain the original one-tick rotation setup. The [recovery notes](docs/RECOVERY.md) document the original 1.21.11 changes, and the [26.x port guide](ports/README.md) documents the API updates.
+
+## Troubleshooting
+
+| Problem | What to check |
+| :--- | :--- |
+| Missing `fzzy_config` dependency | Install the matching **Fzzy Config** JAR from the dependency table. |
+| Missing Fabric API or Fabric Language Kotlin | Install both libraries for the selected Minecraft version. Fzzy Config requires them. |
+| Unsupported Java or class-file-version error | Minecraft 26.x needs **Java 25+**; the original 1.21.11 build needs **Java 21+**. Check the launcher profile's Java selection. |
+| Incompatible Minecraft version or duplicate mod | Use the exact target JAR and keep one Spear Dashing version in the profile. |
+| The dash does not trigger | Check that dashing is enabled, **R** is bound correctly, a Lunge-enchanted spear is in the hotbar, a menu is not open, and the attack cooldown permits another attempt. |
 
 ## Build from source
 
-### Minecraft 26.x — Java 25
+### Minecraft 26.x — JDK 25+ and Python 3.10+
 
-The modern port uses the game's official, unobfuscated class names, common source, and small version-specific adapters. With Python 3.10+ and JDK 25+ on `PATH`, run:
+From the repository root, build all five targets:
 
 ```powershell
 python ports/build.py --all
 ```
 
-To build one target:
+Or build one target:
 
 ```powershell
 python ports/build.py --minecraft 26.3
 ```
 
-Outputs are under `build/ports/<minecraft-version>/`. Dependencies and game manifests are pinned and checksum-verified. See the [26.x build guide and validation notes](ports/README.md).
+The builder uses Python's standard library plus `javac` and `javap` from the JDK. It downloads pinned game manifests and dependencies, checks their hashes, compiles the common source with the correct version adapter, and packages a target-specific JAR.
 
-### Original Minecraft 1.21.11 — Java 21
+Outputs are saved under `build/ports/<minecraft-version>/`, alongside `SHA256SUMS` and `build-report.json`. For example:
 
-This is **recovered and modified source from the supplied Spear Dashing 1.0 JAR**. It retains Fabric intermediary names such as `class_310` and uses the installed profile's dependencies. It is not a reconstructed Gradle/Loom project.
+```text
+build/ports/26.3/Spear Dashing V1.1 MC26.3.jar
+```
 
-#### Windows / PowerShell
+See the [complete port build guide](ports/README.md) for all output paths and API differences.
 
-Ensure a **JDK 21+** is on `PATH`. Launch the target Modrinth profile once so its Minecraft, Fabric and library caches exist, then close the game before installing the resulting JAR.
+<details>
+<summary><strong>Build the original Minecraft 1.21.11 release</strong></summary>
 
-From the repository root:
+The original source was recovered and modified from the supplied Spear Dashing 1.0 JAR. It retains Fabric intermediary names and compiles against an installed Modrinth profile's runtime caches.
+
+With a JDK 21+ on `PATH`, run:
 
 ```powershell
 ./build.ps1
 ```
 
-The default profile is **Remarkably Optimized** under `%APPDATA%/ModrinthApp`. To use another profile:
+The default profile is `Remarkably Optimized` under `%APPDATA%/ModrinthApp`. To select a different profile:
 
 ```powershell
 ./build.ps1 -ModrinthRoot 'D:/Games/ModrinthApp' -ProfileName 'My Fabric Profile'
 ```
 
-For source compilation, the current `build.ps1` still expects the original cached Fzzy Config **0.7.6** filename below. The **0.7.7** download above is the supplied installation link. The selected build profile must have these exact runtime-cache and dependency paths:
+This legacy build script specifically expects these cached paths:
 
 ```text
 .fabric/remappedJars/minecraft-1.21.11-0.18.6/client-intermediary.jar
 mods/fzzy_config-0.7.6+1.21.11.jar
 ```
 
-Build output:
+The cached **0.7.6** filename is a source-build requirement of that script; the **0.7.7** link above is the installation download supplied for players.
 
-```text
-build/Spear Dashing V1.1.jar
-```
+Output: `build/Spear Dashing V1.1.jar`.
 
-## Releases
+</details>
 
-Installable JARs are available under **[GitHub Releases](https://github.com/mmaarij123/Spear-Dashing/releases)**. Use the [support table](#supported-minecraft-versions) to select the matching JAR. The source ZIP and source tarball are for development.
+## Validation & known limits
 
-The source tree contains the code, resources, build script and documentation. Compiled binaries are distributed separately as release assets. See [release details](docs/RELEASES.md) for the filename, checksum and build notes.
+| Build family | Compilation | Client startup | In-world dashing / multiplayer |
+| :--- | :--- | :--- | :--- |
+| **All five 26.x targets** | Passed separately for every target | Passed in isolated Fabric clients | **Not tested** |
+| **Original 1.21.11** | Compilation and packaged-bytecode checks recorded in the recovery notes | Not verified in the recovery record | **Not tested** |
 
-## Project map
+The 26.x startup checks verified the title screen, Fzzy Config registration, dash key binding registration, and application of the attack-invoker mixin. Each published 26.x JAR was also downloaded and its SHA-256 checked against the built artifact.
+
+These checks do not establish in-world dash timing, server acceptance, or compatibility with unrelated mods. See [VALIDATION.json](ports/VALIDATION.json) for per-target results and hashes, and [release details](docs/RELEASES.md) for the original artifact's checksum.
+
+To check gameplay, use a test world and try tapping and holding **R**, intervals 1–5, opening and closing the inventory, and leaving/rejoining the world. Confirm the original selected hotbar slot returns after releasing the key.
+
+## Project layout
 
 ```text
 Spear-Dashing/
-├── src/main/java/speardash/
-│   ├── SpearDash.java                # Mod entry point
-│   ├── SpearDashClient.java          # Input, swap and dash logic
-│   ├── SpearDashConfig.java          # Settings and defaults
-│   ├── SpearDashConfigApi.java       # Config dialog support
-│   ├── KeyBinding.java              # Default R binding
-│   └── mixin/client/ForceAttack.java
-├── src/main/resources/              # Metadata, mixins, icon and language files
-├── docs/RECOVERY.md                  # Original recovery and validation record
-├── docs/RELEASES.md                  # Release download and artifact checksum
-├── ports/src/main/java/             # Common Minecraft 26.x source
-├── ports/compat/                    # Version-specific API adapters
-├── ports/versions.json              # Pinned manifests and dependencies
-├── ports/build.py                   # Java 25 build matrix
-├── build.ps1                        # Local-cache build script
-└── LICENSE                          # Reserved rights; earlier CC0 rights preserved
+├── src/main/java/speardash/     # Original 1.21.11 source
+├── src/main/resources/         # Shared icon, metadata templates and license notices
+├── ports/
+│   ├── src/main/java/          # Common Minecraft 26.x source
+│   ├── compat/                 # 26.1-family, 26.2 and 26.3 adapters
+│   ├── versions.json           # Pinned game manifests and dependencies
+│   ├── build.py                # Five-target Java 25 builder
+│   ├── VALIDATION.json         # Per-target startup results and artifact hashes
+│   └── README.md               # Detailed port guide
+├── docs/
+│   ├── RECOVERY.md             # Original recovery and change record
+│   └── RELEASES.md             # Release links and original artifact details
+├── build.ps1                   # Original 1.21.11 build script
+├── LICENSE
+└── THIRD_PARTY_NOTICES.md
 ```
-
-## Validation notes
-
-The **26.x** variants were compiled separately against all five target game JARs. Isolated Fabric clients verified title-screen startup, Fzzy Config registration, key binding registration, and application of the attack-invoker mixin. See the [port validation record](ports/VALIDATION.json). Actual in-world dash timing, multiplayer behavior, and compatibility with other mods have not been tested.
-
-The original recovery record reports successful compilation and packaged bytecode checks. In-game timing, server acceptance and compatibility with other mods have **not** been verified. The release JAR uses the existing optimized compiled classes, repackaged with updated licensing metadata and notices, and renamed for distribution. Its class files are unchanged; this is not a new compilation. The [release details](docs/RELEASES.md) record its SHA-256 checksum.
-
-For a quick in-game check, try a tap, a held press, release/repress, intervals 1–5, opening the inventory, and leaving/rejoining a world. Verify that the original selected slot returns after releasing the key.
 
 ## Credits & license
 
-**Maarij** is credited in the mod metadata. Original contributions that have not already been licensed with continuing permissions are **All Rights Reserved** under the [proprietary license](LICENSE). Personal gameplay with the unmodified published JAR is permitted; reuse of covered source code requires prior written permission.
+**Maarij** is credited in the mod metadata. Original contributions covered by the [proprietary license](LICENSE) are **All Rights Reserved**; personal gameplay with the unmodified published JAR is permitted under that notice.
 
-**Earlier CC0 rights remain intact.** The recovered upstream source and material already made available under CC0 retain their original permissions. This notice cannot make the entire recovered codebase exclusive or prevent GitHub's permitted public forks. See [licensing scope and third-party notices](THIRD_PARTY_NOTICES.md) for the distinction.
+Recovered upstream code and material previously released under **CC0** keep their existing permissions. The proprietary notice does not revoke those rights. See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for the full scope.
 
 ---
 
 <div align="center">
-<sub>Spear Dashing · Fabric · V1.1</sub>
+<sub>Spear Dashing V1.1 · Fabric · Five Minecraft 26.x builds + original 1.21.11</sub>
 </div>
